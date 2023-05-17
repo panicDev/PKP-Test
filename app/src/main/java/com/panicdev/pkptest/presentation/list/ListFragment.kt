@@ -140,7 +140,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     private fun showDialogEdit(item: Post, pos: Int) {
         MaterialDialog(requireContext()).show {
             cornerRadius(16F)
-            title(R.string.create_new_post_title)
+            title(R.string.edit_post_title)
             input(allowEmpty = false, prefill = item.body) { _, text ->
                 item.body = text.toString()
             }

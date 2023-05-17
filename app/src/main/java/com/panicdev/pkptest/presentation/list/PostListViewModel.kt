@@ -39,7 +39,7 @@ class PostListViewModel @Inject constructor(
 
             is ListAction.EditAction -> {
                 runCatching {
-                    useCase.deletePost.invoke(action.item.id)
+                    useCase.editPost.invoke(action.item.id, action.item)
                 }.onSuccess {
                     postSideEffect(ListEffect.PostUpdatedSideEffect(action.item, action.position))
                 }.onFailure {
@@ -49,7 +49,7 @@ class PostListViewModel @Inject constructor(
 
             is ListAction.CreateAction -> {
                 runCatching {
-                    useCase.deletePost.invoke(action.item.id)
+                    useCase.createPost.invoke(action.item)
                 }.onSuccess {
                     postSideEffect(ListEffect.PostAddedSideEffect(action.item))
                 }.onFailure {

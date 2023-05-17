@@ -47,4 +47,5 @@
     <string name="yes">Yes</string>
     <string name="delete_post_desc">Delete this post?</string>
     <string name="close">Close</string>
+    <string name="edit_post_title">Edit Post</string>
 </resources>
